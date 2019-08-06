@@ -23,6 +23,24 @@
 		418C175C1F97F19F003C03F7 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17571F97DB2E003C03F7 /* Component.swift */; };
 		418C175D1F97F1A1003C03F7 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17561F97DB2E003C03F7 /* Dependency.swift */; };
 		5F07DDFB22F9E21A00135D05 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07DDFA22F9E21900135D05 /* ControllerType.swift */; };
+		5F07DE0A22F9E2B600135D05 /* RIBs_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F07DE0122F9E2B600135D05 /* RIBs_macOS.framework */; };
+		5F07DE0F22F9E2B600135D05 /* RIBs_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07DE0E22F9E2B600135D05 /* RIBs_macOSTests.swift */; };
+		5F07DE1122F9E2B600135D05 /* RIBs_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F07DE0322F9E2B600135D05 /* RIBs_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F07DE1822F9E2BD00135D05 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07DDFA22F9E21900135D05 /* ControllerType.swift */; };
+		5F07DE1922F9E2BD00135D05 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177291F8EEFF0005F08F0 /* Builder.swift */; };
+		5F07DE1A22F9E2BD00135D05 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177221F8EEFEF005F08F0 /* Interactor.swift */; };
+		5F07DE1C22F9E2BD00135D05 /* PresentableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177231F8EEFEF005F08F0 /* PresentableInteractor.swift */; };
+		5F07DE1D22F9E2BD00135D05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177251F8EEFEF005F08F0 /* Presenter.swift */; };
+		5F07DE1E22F9E2BD00135D05 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177271F8EEFEF005F08F0 /* Router.swift */; };
+		5F07DE1F22F9E2BD00135D05 /* ViewableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177241F8EEFEF005F08F0 /* ViewableRouter.swift */; };
+		5F07DE2022F9E2BD00135D05 /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177281F8EEFEF005F08F0 /* ViewControllable.swift */; };
+		5F07DE2122F9E2C600135D05 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17571F97DB2E003C03F7 /* Component.swift */; };
+		5F07DE2222F9E2C600135D05 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17561F97DB2E003C03F7 /* Dependency.swift */; };
+		5F07DE2322F9E2CA00135D05 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */; };
+		5F07DE2422F9E2D000135D05 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177371F8EF70A005F08F0 /* Executor.swift */; };
+		5F07DE2522F9E2D000135D05 /* LeakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177381F8EF70A005F08F0 /* LeakDetector.swift */; };
+		5F07DE2622F9E2D600135D05 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131772B1F8EEFF0005F08F0 /* Worker.swift */; };
+		5F07DE2722F9E2DC00135D05 /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177211F8EEFEF005F08F0 /* Workflow.swift */; };
 		8B9882EC1F86E1CF00ABE009 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9882E21F86E1CF00ABE009 /* RIBs.framework */; };
 		8B9882F31F86E1CF00ABE009 /* RIBs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9882E51F86E1CF00ABE009 /* RIBs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF90B40A1FBA14DB00920384 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90B4091FBA14DB00920384 /* RouterTests.swift */; };
@@ -37,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5F07DE0B22F9E2B600135D05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B9882D91F86E1CF00ABE009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F07DE0022F9E2B600135D05;
+			remoteInfo = RIBs_macOS;
+		};
 		8B9882ED1F86E1CF00ABE009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8B9882D91F86E1CF00ABE009 /* Project object */;
@@ -63,6 +88,12 @@
 		418C17561F97DB2E003C03F7 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		418C17571F97DB2E003C03F7 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		5F07DDFA22F9E21900135D05 /* ControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
+		5F07DE0122F9E2B600135D05 /* RIBs_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F07DE0322F9E2B600135D05 /* RIBs_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIBs_macOS.h; sourceTree = "<group>"; };
+		5F07DE0422F9E2B600135D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F07DE0922F9E2B600135D05 /* RIBs_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIBs_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F07DE0E22F9E2B600135D05 /* RIBs_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIBs_macOSTests.swift; sourceTree = "<group>"; };
+		5F07DE1022F9E2B600135D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9882E21F86E1CF00ABE009 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9882E51F86E1CF00ABE009 /* RIBs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIBs.h; sourceTree = "<group>"; };
 		8B9882E61F86E1CF00ABE009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +111,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F07DDFE22F9E2B600135D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F07DE0622F9E2B600135D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F07DE0A22F9E2B600135D05 /* RIBs_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B9882DE1F86E1CF00ABE009 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,11 +209,31 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		5F07DE0222F9E2B600135D05 /* RIBs_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5F07DE0322F9E2B600135D05 /* RIBs_macOS.h */,
+				5F07DE0422F9E2B600135D05 /* Info.plist */,
+			);
+			path = RIBs_macOS;
+			sourceTree = "<group>";
+		};
+		5F07DE0D22F9E2B600135D05 /* RIBs_macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F07DE0E22F9E2B600135D05 /* RIBs_macOSTests.swift */,
+				5F07DE1022F9E2B600135D05 /* Info.plist */,
+			);
+			path = RIBs_macOSTests;
+			sourceTree = "<group>";
+		};
 		8B9882D81F86E1CF00ABE009 = {
 			isa = PBXGroup;
 			children = (
 				8B9882E41F86E1CF00ABE009 /* RIBs */,
 				8B9882EF1F86E1CF00ABE009 /* RIBsTests */,
+				5F07DE0222F9E2B600135D05 /* RIBs_macOS */,
+				5F07DE0D22F9E2B600135D05 /* RIBs_macOSTests */,
 				8B9882E31F86E1CF00ABE009 /* Products */,
 				AF5101421FBBA64A009C0DB3 /* Frameworks */,
 			);
@@ -178,6 +244,8 @@
 			children = (
 				8B9882E21F86E1CF00ABE009 /* RIBs.framework */,
 				8B9882EB1F86E1CF00ABE009 /* RIBsTests.xctest */,
+				5F07DE0122F9E2B600135D05 /* RIBs_macOS.framework */,
+				5F07DE0922F9E2B600135D05 /* RIBs_macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +319,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5F07DDFC22F9E2B600135D05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F07DE1122F9E2B600135D05 /* RIBs_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B9882DF1F86E1CF00ABE009 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +338,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5F07DE0022F9E2B600135D05 /* RIBs_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F07DE1222F9E2B600135D05 /* Build configuration list for PBXNativeTarget "RIBs_macOS" */;
+			buildPhases = (
+				5F07DDFC22F9E2B600135D05 /* Headers */,
+				5F07DDFD22F9E2B600135D05 /* Sources */,
+				5F07DDFE22F9E2B600135D05 /* Frameworks */,
+				5F07DDFF22F9E2B600135D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RIBs_macOS;
+			productName = RIBs_macOS;
+			productReference = 5F07DE0122F9E2B600135D05 /* RIBs_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F07DE0822F9E2B600135D05 /* RIBs_macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F07DE1522F9E2B600135D05 /* Build configuration list for PBXNativeTarget "RIBs_macOSTests" */;
+			buildPhases = (
+				5F07DE0522F9E2B600135D05 /* Sources */,
+				5F07DE0622F9E2B600135D05 /* Frameworks */,
+				5F07DE0722F9E2B600135D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F07DE0C22F9E2B600135D05 /* PBXTargetDependency */,
+			);
+			name = RIBs_macOSTests;
+			productName = RIBs_macOSTests;
+			productReference = 5F07DE0922F9E2B600135D05 /* RIBs_macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8B9882E11F86E1CF00ABE009 /* RIBs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B9882F61F86E1CF00ABE009 /* Build configuration list for PBXNativeTarget "RIBs" */;
@@ -305,10 +417,18 @@
 		8B9882D91F86E1CF00ABE009 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Uber Technologies";
 				TargetAttributes = {
+					5F07DE0022F9E2B600135D05 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					5F07DE0822F9E2B600135D05 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					8B9882E11F86E1CF00ABE009 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1020;
@@ -336,11 +456,27 @@
 			targets = (
 				8B9882E11F86E1CF00ABE009 /* RIBs */,
 				8B9882EA1F86E1CF00ABE009 /* RIBsTests */,
+				5F07DE0022F9E2B600135D05 /* RIBs_macOS */,
+				5F07DE0822F9E2B600135D05 /* RIBs_macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5F07DDFF22F9E2B600135D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F07DE0722F9E2B600135D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B9882E01F86E1CF00ABE009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +515,36 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5F07DDFD22F9E2B600135D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F07DE2322F9E2CA00135D05 /* Foundation+Extensions.swift in Sources */,
+				5F07DE1D22F9E2BD00135D05 /* Presenter.swift in Sources */,
+				5F07DE2122F9E2C600135D05 /* Component.swift in Sources */,
+				5F07DE1A22F9E2BD00135D05 /* Interactor.swift in Sources */,
+				5F07DE2422F9E2D000135D05 /* Executor.swift in Sources */,
+				5F07DE1C22F9E2BD00135D05 /* PresentableInteractor.swift in Sources */,
+				5F07DE1E22F9E2BD00135D05 /* Router.swift in Sources */,
+				5F07DE1822F9E2BD00135D05 /* ControllerType.swift in Sources */,
+				5F07DE2222F9E2C600135D05 /* Dependency.swift in Sources */,
+				5F07DE2722F9E2DC00135D05 /* Workflow.swift in Sources */,
+				5F07DE1922F9E2BD00135D05 /* Builder.swift in Sources */,
+				5F07DE2022F9E2BD00135D05 /* ViewControllable.swift in Sources */,
+				5F07DE2522F9E2D000135D05 /* LeakDetector.swift in Sources */,
+				5F07DE1F22F9E2BD00135D05 /* ViewableRouter.swift in Sources */,
+				5F07DE2622F9E2D600135D05 /* Worker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F07DE0522F9E2B600135D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F07DE0F22F9E2B600135D05 /* RIBs_macOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B9882DD1F86E1CF00ABE009 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +585,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5F07DE0C22F9E2B600135D05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F07DE0022F9E2B600135D05 /* RIBs_macOS */;
+			targetProxy = 5F07DE0B22F9E2B600135D05 /* PBXContainerItemProxy */;
+		};
 		8B9882EE1F86E1CF00ABE009 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8B9882E11F86E1CF00ABE009 /* RIBs */;
@@ -427,6 +598,98 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5F07DE1322F9E2B600135D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RIBs_macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnchorFree.RIBs-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PRODUCTS_DIR)../Carthage/Build/Mac";
+			};
+			name = Debug;
+		};
+		5F07DE1422F9E2B600135D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = RIBs_macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnchorFree.RIBs-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PRODUCTS_DIR)../Carthage/Build/Mac";
+			};
+			name = Release;
+		};
+		5F07DE1622F9E2B600135D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RIBs_macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnchorFree.RIBs-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5F07DE1722F9E2B600135D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RIBs_macOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AnchorFree.RIBs-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		8B9882F41F86E1CF00ABE009 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -638,6 +901,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F07DE1222F9E2B600135D05 /* Build configuration list for PBXNativeTarget "RIBs_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F07DE1322F9E2B600135D05 /* Debug */,
+				5F07DE1422F9E2B600135D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F07DE1522F9E2B600135D05 /* Build configuration list for PBXNativeTarget "RIBs_macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F07DE1622F9E2B600135D05 /* Debug */,
+				5F07DE1722F9E2B600135D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B9882DC1F86E1CF00ABE009 /* Build configuration list for PBXProject "RIBs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
