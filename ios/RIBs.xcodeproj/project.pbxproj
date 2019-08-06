@@ -22,6 +22,7 @@
 		4131773D1F8EF98A005F08F0 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */; };
 		418C175C1F97F19F003C03F7 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17571F97DB2E003C03F7 /* Component.swift */; };
 		418C175D1F97F1A1003C03F7 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17561F97DB2E003C03F7 /* Dependency.swift */; };
+		5F07DDFB22F9E21A00135D05 /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07DDFA22F9E21900135D05 /* ControllerType.swift */; };
 		8B9882EC1F86E1CF00ABE009 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9882E21F86E1CF00ABE009 /* RIBs.framework */; };
 		8B9882F31F86E1CF00ABE009 /* RIBs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9882E51F86E1CF00ABE009 /* RIBs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF90B40A1FBA14DB00920384 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90B4091FBA14DB00920384 /* RouterTests.swift */; };
@@ -61,6 +62,7 @@
 		4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
 		418C17561F97DB2E003C03F7 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		418C17571F97DB2E003C03F7 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		5F07DDFA22F9E21900135D05 /* ControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
 		8B9882E21F86E1CF00ABE009 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9882E51F86E1CF00ABE009 /* RIBs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIBs.h; sourceTree = "<group>"; };
 		8B9882E61F86E1CF00ABE009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		4121671B1F8C5BDC00371904 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F07DDFA22F9E21900135D05 /* ControllerType.swift */,
 				413177291F8EEFF0005F08F0 /* Builder.swift */,
 				413177221F8EEFEF005F08F0 /* Interactor.swift */,
 				413177261F8EEFEF005F08F0 /* LaunchRouter.swift */,
@@ -385,6 +388,7 @@
 				4131773D1F8EF98A005F08F0 /* Foundation+Extensions.swift in Sources */,
 				4131772E1F8EF5FF005F08F0 /* LaunchRouter.swift in Sources */,
 				413177391F8EF70F005F08F0 /* Executor.swift in Sources */,
+				5F07DDFB22F9E21A00135D05 /* ControllerType.swift in Sources */,
 				413177341F8EF602005F08F0 /* Worker.swift in Sources */,
 				418C175D1F97F1A1003C03F7 /* Dependency.swift in Sources */,
 				4131772D1F8EF5FF005F08F0 /* Interactor.swift in Sources */,

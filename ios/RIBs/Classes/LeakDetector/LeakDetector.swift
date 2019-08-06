@@ -114,7 +114,7 @@ public class LeakDetector {
     /// - parameter inTime: The time the given view controller is expected to disappear.
     /// - returns: The handle that can be used to cancel the expectation.
     @discardableResult
-    public func expectViewControllerDisappear(viewController: UIViewController, inTime time: TimeInterval = LeakDefaultExpectationTime.viewDisappear) -> LeakDetectionHandle {
+    public func expectViewControllerDisappear(viewController: ControllerType, inTime time: TimeInterval = LeakDefaultExpectationTime.viewDisappear) -> LeakDetectionHandle {
         expectationCount.accept(expectationCount.value + 1)
 
         let handle = LeakDetectionHandleImpl {
