@@ -14,22 +14,30 @@
 //  limitations under the License.
 //
 
-#if os(iOS)
-    import UIKit
+#if os(macOS)
+import AppKit
 #else
-    import AppKit
+import UIKit
 #endif
+
+
+#if os(macOS)
+public typealias ViewController = NSViewController
+#else
+public typealias ViewController = UIViewController
+#endif
+
 
 /// Basic interface between a `Router` and the UIKit `UIViewController` or AppKit `NSViewController`.
 public protocol ViewControllable: class {
 
-    var uiviewController: ControllerType { get }
+    var viewController: ViewController { get }
 }
 
-/// Default implementation on `UIViewController` to conform to `ViewControllable` protocol
-public extension ViewControllable where Self: ControllerType {
+/// Default implementation on `*ViewController` to conform to `ViewControllable` protocol
+public extension ViewControllable where Self: ViewController {
 
-    var uiviewController: ControllerType {
+    var viewController: ViewController {
         return self
     }
 }

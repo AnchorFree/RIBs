@@ -18,29 +18,9 @@ import RIBs
 import RxRelay
 import RxSwift
 
-class WindowMock: UIWindow {
-    
-    override var isKeyWindow: Bool {
-        return internalIsKeyWindow
-    }
-    
-    override var rootViewController: UIViewController? {
-        get { return internalRootViewController }
-        set { internalRootViewController = newValue }
-    }
-    
-    override func makeKeyAndVisible() {
-        internalIsKeyWindow = true
-    }
-    
-    // MARK: - Private
-    
-    private var internalIsKeyWindow: Bool = false
-    private var internalRootViewController: UIViewController?
-}
 
 class ViewControllableMock: ViewControllable {
-    let uiviewController = UIViewController(nibName: nil, bundle: nil)
+    let viewController = ViewController(nibName: nil, bundle: nil)
 }
 
 class InteractorMock: Interactable {

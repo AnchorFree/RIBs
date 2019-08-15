@@ -17,6 +17,29 @@
 @testable import RIBs
 import XCTest
 
+
+class WindowMock: UIWindow {
+
+    override var isKeyWindow: Bool {
+        return internalIsKeyWindow
+    }
+
+    override var rootViewController: UIViewController? {
+        get { return internalRootViewController }
+        set { internalRootViewController = newValue }
+    }
+
+    override func makeKeyAndVisible() {
+        internalIsKeyWindow = true
+    }
+
+    // MARK: - Private
+
+    private var internalIsKeyWindow: Bool = false
+    private var internalRootViewController: UIViewController?
+}
+
+
 final class LaunchRouterTests: XCTestCase {
 
     private var launchRouter: LaunchRouting!
@@ -40,7 +63,7 @@ final class LaunchRouterTests: XCTestCase {
         let window = WindowMock(frame: .zero)
         launchRouter.launch(from: window)
 
-        XCTAssert(window.rootViewController === viewController.uiviewController)
+        XCTAssert(window.rootViewController === viewController.viewController)
         XCTAssert(window.isKeyWindow)
     }
 }
