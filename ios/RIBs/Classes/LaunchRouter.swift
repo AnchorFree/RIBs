@@ -14,6 +14,41 @@
 //  limitations under the License.
 //
 
+import Foundation
+
+
+#if os(macOS)
+import Cocoa
+
+/// The root `Router` of an application. MacOS apps don't necessarily launch to any UI so it is not declared
+/// as a ViewableRouting. Subclasses declared for simple applications (i.e. a single window app) may implement
+/// ViewableRouting in a manner similar to the iOS version and launch the app's UI in its didLoad() method.
+public protocol LaunchRouting: Routing {
+
+    /// Launches the router tree. Mac apps are not obligated to display UI on launch so what to do is left as an
+    /// exercise to subclass implementers.
+    func launch()
+}
+
+/// The application root router base class, that acts as the root of the router tree.
+open class LaunchRouter<InteractorType>: Router<InteractorType>, LaunchRouting {
+
+    /// Initializer.
+    ///
+    /// - parameter interactor: The corresponding `Interactor` of this `Router`.
+    public override init(interactor: InteractorType) {
+        super.init(interactor: interactor)
+    }
+
+    /// Launches the router tree.
+    public final func launch() {
+        interactable.activate()
+        load()
+    }
+}
+#endif
+
+#if os(iOS)
 import UIKit
 
 /// The root `Router` of an application.
@@ -47,3 +82,4 @@ open class LaunchRouter<InteractorType, ViewControllerType>: ViewableRouter<Inte
         load()
     }
 }
+#endif

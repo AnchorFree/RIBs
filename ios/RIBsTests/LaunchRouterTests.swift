@@ -18,6 +18,10 @@
 import XCTest
 
 
+/**
+ The current set of tests for LaunchRouter is only for the iOS version of it.
+ */
+#if os(iOS)
 class WindowMock: UIWindow {
 
     override var isKeyWindow: Bool {
@@ -67,3 +71,4 @@ final class LaunchRouterTests: XCTestCase {
         XCTAssert(window.isKeyWindow)
     }
 }
+#endif
