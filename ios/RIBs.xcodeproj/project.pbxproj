@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AABB9592339951700604CA1 /* RIBs_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AABB9572339951700604CA1 /* RIBs_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A8B893C2339EEE500C2F761 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177291F8EEFF0005F08F0 /* Builder.swift */; };
+		0A8B893D2339EEE800C2F761 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177221F8EEFEF005F08F0 /* Interactor.swift */; };
+		0A8B893E2339EEEA00C2F761 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177261F8EEFEF005F08F0 /* LaunchRouter.swift */; };
+		0A8B893F2339EEED00C2F761 /* PresentableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177231F8EEFEF005F08F0 /* PresentableInteractor.swift */; };
+		0A8B89402339EEEF00C2F761 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177251F8EEFEF005F08F0 /* Presenter.swift */; };
+		0A8B89412339EEF200C2F761 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177271F8EEFEF005F08F0 /* Router.swift */; };
+		0A8B89422339EEF500C2F761 /* ViewableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177241F8EEFEF005F08F0 /* ViewableRouter.swift */; };
+		0A8B89432339EEF800C2F761 /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177281F8EEFEF005F08F0 /* ViewControllable.swift */; };
+		0A8B89442339EEFC00C2F761 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17571F97DB2E003C03F7 /* Component.swift */; };
+		0A8B89452339EEFF00C2F761 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17561F97DB2E003C03F7 /* Dependency.swift */; };
+		0A8B89462339EF0400C2F761 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */; };
+		0A8B89472339EF0800C2F761 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177371F8EF70A005F08F0 /* Executor.swift */; };
+		0A8B89482339EF0A00C2F761 /* LeakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177381F8EF70A005F08F0 /* LeakDetector.swift */; };
+		0A8B89492339EF1200C2F761 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131772B1F8EEFF0005F08F0 /* Worker.swift */; };
+		0A8B894A2339EF1900C2F761 /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177211F8EEFEF005F08F0 /* Workflow.swift */; };
+		0A8B894B2339EF2C00C2F761 /* RIBs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9882E51F86E1CF00ABE009 /* RIBs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4131772C1F8EF5FF005F08F0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177291F8EEFF0005F08F0 /* Builder.swift */; };
 		4131772D1F8EF5FF005F08F0 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177221F8EEFEF005F08F0 /* Interactor.swift */; };
 		4131772E1F8EF5FF005F08F0 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413177261F8EEFEF005F08F0 /* LaunchRouter.swift */; };
@@ -46,8 +61,6 @@
 
 /* Begin PBXFileReference section */
 		0AABB9552339951700604CA1 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AABB9572339951700604CA1 /* RIBs_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIBs_Mac.h; sourceTree = "<group>"; };
-		0AABB9582339951700604CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413177211F8EEFEF005F08F0 /* Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
 		413177221F8EEFEF005F08F0 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		413177231F8EEFEF005F08F0 /* PresentableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableInteractor.swift; sourceTree = "<group>"; };
@@ -103,15 +116,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AABB9562339951700604CA1 /* RIBs-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				0AABB9572339951700604CA1 /* RIBs_Mac.h */,
-				0AABB9582339951700604CA1 /* Info.plist */,
-			);
-			path = "RIBs-Mac";
-			sourceTree = "<group>";
-		};
 		4121671B1F8C5BDC00371904 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +183,6 @@
 			children = (
 				8B9882E41F86E1CF00ABE009 /* RIBs */,
 				8B9882EF1F86E1CF00ABE009 /* RIBsTests */,
-				0AABB9562339951700604CA1 /* RIBs-Mac */,
 				8B9882E31F86E1CF00ABE009 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -258,7 +261,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AABB9592339951700604CA1 /* RIBs_Mac.h in Headers */,
+				0A8B894B2339EF2C00C2F761 /* RIBs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +427,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8B89462339EF0400C2F761 /* Foundation+Extensions.swift in Sources */,
+				0A8B893E2339EEEA00C2F761 /* LaunchRouter.swift in Sources */,
+				0A8B89442339EEFC00C2F761 /* Component.swift in Sources */,
+				0A8B893D2339EEE800C2F761 /* Interactor.swift in Sources */,
+				0A8B89472339EF0800C2F761 /* Executor.swift in Sources */,
+				0A8B89422339EEF500C2F761 /* ViewableRouter.swift in Sources */,
+				0A8B893F2339EEED00C2F761 /* PresentableInteractor.swift in Sources */,
+				0A8B893C2339EEE500C2F761 /* Builder.swift in Sources */,
+				0A8B89452339EEFF00C2F761 /* Dependency.swift in Sources */,
+				0A8B894A2339EF1900C2F761 /* Workflow.swift in Sources */,
+				0A8B89432339EEF800C2F761 /* ViewControllable.swift in Sources */,
+				0A8B89412339EEF200C2F761 /* Router.swift in Sources */,
+				0A8B89482339EF0A00C2F761 /* LeakDetector.swift in Sources */,
+				0A8B89402339EEEF00C2F761 /* Presenter.swift in Sources */,
+				0A8B89492339EF1200C2F761 /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +507,7 @@
 					"$(PRODUCTS_DIR)../Carthage/Build/Mac/",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RIBs-Mac/Info.plist";
+				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -517,7 +535,7 @@
 					"$(PRODUCTS_DIR)../Carthage/Build/Mac/",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RIBs-Mac/Info.plist";
+				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
