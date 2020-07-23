@@ -39,6 +39,9 @@ public protocol Routing: RouterScope {
     // custom subclass routing protocol, and also this base protocol to allow the `Router` implementation to execute
     // base class logic without error.
 
+    /// Parent `Router` that attached this `Router` as a child
+    var parent: Routing? { get set }
+
     /// The base interactable associated with this `Router`.
     var interactable: Interactable { get }
 
@@ -63,6 +66,17 @@ public protocol Routing: RouterScope {
     ///
     /// - parameter child: The child router to detach.
     func detachChild(_ child: Routing)
+
+    /// Presents given `ViewableRouting`
+    /// - note: This method by defauls calls `present` of it's parent `Routing`
+    ///   override in exact `Router` that will handle presentation e.g RootRouter
+    ///
+    /// - Parameter router: `ViewableRouting` that should be presented
+    func present(_ router: ViewableRouting)
+
+    /// Dismisses current presented `ViewableRouting`
+    /// - note: This method by defauls calls `present` of it's parent `Routing`
+    func dismiss()
 }
 
 /// The base class of all routers that does not own view controllers, representing application states.
@@ -74,6 +88,9 @@ public protocol Routing: RouterScope {
 ///
 /// Routers should always use helper builders to instantiate children routers.
 open class Router<InteractorType>: Routing {
+
+    /// Parent `Router` that attached this `Router` as a child
+    public weak var parent: Routing?
 
     /// The corresponding `Interactor` owned by this `Router`.
     public let interactor: InteractorType
@@ -135,6 +152,9 @@ open class Router<InteractorType>: Routing {
 
         children.append(child)
 
+        // set parent `Routing` for child
+        child.parent = self
+
         // Activate child first before loading. Router usually attaches immutable children in didLoad.
         // We need to make sure the RIB is activated before letting it attach immutable children.
         child.interactable.activate()
@@ -147,7 +167,18 @@ open class Router<InteractorType>: Routing {
     public final func detachChild(_ child: Routing) {
         child.interactable.deactivate()
 
+        // reset parent `Routing` for child
+        child.parent = nil
+
         children.removeElementByReference(child)
+    }
+
+    open func present(_ router: ViewableRouting) {
+        parent?.present(router)
+    }
+
+    open func dismiss() {
+        parent?.dismiss()
     }
 
     // MARK: - Internal
