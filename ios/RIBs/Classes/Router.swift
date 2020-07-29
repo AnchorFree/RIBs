@@ -72,11 +72,12 @@ public protocol Routing: RouterScope {
     ///   override in exact `Router` that will handle presentation e.g RootRouter
     ///
     /// - Parameter router: `ViewableRouting` that should be presented
-    func present(_ router: ViewableRouting)
+    /// - Parameter completion: The block to execute after the presentation finishes.
+    func present(_ router: ViewableRouting, completion: (() -> Void)?)
 
     /// Dismisses current presented `ViewableRouting`
     /// - note: This method by defauls calls `present` of it's parent `Routing`
-    func dismiss()
+    func dismiss(completion: (() -> Void)?)
 }
 
 /// The base class of all routers that does not own view controllers, representing application states.
@@ -173,12 +174,12 @@ open class Router<InteractorType>: Routing {
         children.removeElementByReference(child)
     }
 
-    open func present(_ router: ViewableRouting) {
-        parent?.present(router)
+    open func present(_ router: ViewableRouting, completion: (() -> Void)? = nil) {
+        parent?.present(router, completion: completion)
     }
 
-    open func dismiss() {
-        parent?.dismiss()
+    open func dismiss(completion: (() -> Void)? = nil) {
+        parent?.dismiss(completion: completion)
     }
 
     // MARK: - Internal
