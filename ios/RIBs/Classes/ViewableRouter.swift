@@ -26,6 +26,13 @@ public protocol ViewableRouting: Routing {
 
     /// The base view controllable associated with this `Router`.
     var viewControllable: ViewControllable { get }
+
+    /// this block will be used as prior in case if it's not nil
+    var presentationTransition: (( _ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)? { get }
+}
+
+public extension ViewableRouting {
+    var presentationTransition: ((_ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)? { return nil }
 }
 
 /// The base class of all routers that owns view controllers, representing application states.
@@ -40,6 +47,9 @@ open class ViewableRouter<InteractorType, ViewControllerType>: Router<Interactor
 
     /// The base `ViewControllable` associated with this `Router`.
     public let viewControllable: ViewControllable
+
+    /// this block will be used as prior in case if it's not nil
+    public var presentationTransition: (( _ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)?
 
     /// Initializer.
     ///
