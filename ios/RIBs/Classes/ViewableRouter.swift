@@ -49,7 +49,7 @@ open class ViewableRouter<InteractorType, ViewControllerType>: Router<Interactor
     public let viewControllable: ViewControllable
 
     /// this block will be used as prior in case if it's not nil
-    public var presentationTransition: ((_ routing:ViewableRouting,_ completion:(() -> Void)) -> Void)?
+    public var presentationTransition: (( _ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)?
 
     /// Initializer.
     ///
