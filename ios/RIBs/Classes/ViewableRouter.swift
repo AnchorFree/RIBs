@@ -28,7 +28,7 @@ public protocol ViewableRouting: Routing {
     var viewControllable: ViewControllable { get }
 
     /// this block will be used as prior in case if it's not nil
-    var presentationTransition: ((_ routing:ViewableRouting,_ completion:(() -> Void)) -> Void)? { get }
+    var presentationTransition: (( _ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)? { get }
 }
 
 extension ViewableRouting {
