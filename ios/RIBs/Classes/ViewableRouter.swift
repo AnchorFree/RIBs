@@ -31,8 +31,8 @@ public protocol ViewableRouting: Routing {
     var presentationTransition: (( _ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)? { get }
 }
 
-extension ViewableRouting {
-    var presentationTransition: ((_ routing:ViewableRouting,_ completion:(() -> Void)) -> Void)? { return nil }
+public extension ViewableRouting {
+    var presentationTransition: ((_ routing: ViewableRouting, _ completion: (() -> Void)) -> Void)? { return nil }
 }
 
 /// The base class of all routers that owns view controllers, representing application states.
