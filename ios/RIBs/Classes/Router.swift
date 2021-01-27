@@ -187,11 +187,11 @@ open class Router<InteractorType>: Routing {
         children.removeElementByReference(child)
     }
 
-    open func present(_ router: ViewableRouting, animated: Bool, completion: (() -> Void)) {
+    open func present(_ router: ViewableRouting, animated: Bool, completion: (() -> Void)?) {
         parent?.present(router, animated: animated, completion: completion)
     }
 
-    open func dismiss(animated: Bool, completion: (() -> Void)) {
+    open func dismiss(animated: Bool, completion: (() -> Void)?) {
         parent?.dismiss(animated: animated, completion: completion)
     }
 
