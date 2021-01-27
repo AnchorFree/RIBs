@@ -80,6 +80,19 @@ public protocol Routing: RouterScope {
     func dismiss(animated: Bool, completion: (() -> Void)?)
 }
 
+public extension Routing {
+
+    func present(_ router: ViewableRouting, animated: Bool = true, completion: (() -> Void)? = nil) {
+        self.present(router, animated: animated, completion: completion)
+    }
+
+    /// Dismisses current presented `ViewableRouting`
+    /// - note: This method by defauls calls `present` of it's parent `Routing`
+    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
+        self.dismiss(animated: animated, completion: completion)
+    }
+}
+
 /// The base class of all routers that does not own view controllers, representing application states.
 ///
 /// A router acts on inputs from its corresponding interactor, to manipulate application state, forming a tree of
@@ -174,11 +187,11 @@ open class Router<InteractorType>: Routing {
         children.removeElementByReference(child)
     }
 
-    open func present(_ router: ViewableRouting, animated: Bool, completion: (() -> Void)? = nil) {
+    open func present(_ router: ViewableRouting, animated: Bool, completion: (() -> Void)) {
         parent?.present(router, animated: animated, completion: completion)
     }
 
-    open func dismiss(animated: Bool, completion: (() -> Void)? = nil) {
+    open func dismiss(animated: Bool, completion: (() -> Void)) {
         parent?.dismiss(animated: animated, completion: completion)
     }
 
