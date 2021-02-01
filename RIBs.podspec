@@ -10,8 +10,9 @@ RIBs is the cross-platform architecture behind many mobile apps at Uber. This ar
   s.author           = { 'uber' => 'mobile-open-source@uber.com' }
   s.source           = { :git => 'https://github.com/uber/RIBs.git', :tag => 'v' + s.version.to_s }
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.12'
   s.source_files = 'ios/RIBs/Classes/**/*'
-  s.swift_version = '5.0'
-  s.dependency 'RxSwift', '~> 5.0.0'
-  s.dependency 'RxRelay', '~> 5.0.0'
+  s.dependency 'RxSwift', '~> 5.1'
+  s.dependency 'RxRelay', '~> 5.1'
+
 end
