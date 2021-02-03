@@ -604,7 +604,10 @@
 				EXCLUDED_ARCHS = "$(inherited) i386-apple-ios-simulator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/**",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/ios-arm64_i386_x86_64-simulator/",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/ios-arm64_armv7/",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/macos-arm64_x86_64/",
 					"$(PRODUCTS_DIR)../Carthage/Build/RxRelay.xcframework/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -677,7 +680,10 @@
 				EXCLUDED_ARCHS = "$(inherited) i386-apple-ios-simulator";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/**",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/ios-arm64_i386_x86_64-simulator/",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/ios-arm64_armv7/",
+					"$(PRODUCTS_DIR)../Carthage/Build/RxSwift.xcframework/macos-arm64_x86_64/",
 					"$(PRODUCTS_DIR)../Carthage/Build/RxRelay.xcframework/**",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -709,7 +715,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386-apple-ios-simulator arm64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) arm64";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"$(inherited)",
 					"$(PRODUCTS_DIR)../Carthage/Build/iOS/",
@@ -747,7 +753,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) i386-apple-ios-simulator arm64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "$(inherited) arm64";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
 					"$(inherited)",
 					"$(PRODUCTS_DIR)../Carthage/Build/iOS/",
