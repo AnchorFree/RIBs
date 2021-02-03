@@ -512,6 +512,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					RxSwift,
+					"-framework",
+					RxRelay,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anchorfree.hss.RIBs-Mac";
 				PRODUCT_NAME = RIBs;
 				SDKROOT = macosx;
@@ -539,6 +546,13 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					RxSwift,
+					"-framework",
+					RxRelay,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anchorfree.hss.RIBs-Mac";
 				PRODUCT_NAME = RIBs;
 				SDKROOT = macosx;
