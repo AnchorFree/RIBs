@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,10 @@
 		4131773D1F8EF98A005F08F0 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */; };
 		418C175C1F97F19F003C03F7 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17571F97DB2E003C03F7 /* Component.swift */; };
 		418C175D1F97F1A1003C03F7 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C17561F97DB2E003C03F7 /* Dependency.swift */; };
+		5A7F6A6225CC75A4009591AF /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F6A6025CC75A4009591AF /* RxRelay.xcframework */; };
+		5A7F6A6425CC75A4009591AF /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F6A6125CC75A4009591AF /* RxSwift.xcframework */; };
+		5A7F6A6E25CC75B1009591AF /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F6A6025CC75A4009591AF /* RxRelay.xcframework */; };
+		5A7F6A7025CC75B1009591AF /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7F6A6125CC75A4009591AF /* RxSwift.xcframework */; };
 		8B9882EC1F86E1CF00ABE009 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9882E21F86E1CF00ABE009 /* RIBs.framework */; };
 		8B9882F31F86E1CF00ABE009 /* RIBs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9882E51F86E1CF00ABE009 /* RIBs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF90B40A1FBA14DB00920384 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF90B4091FBA14DB00920384 /* RouterTests.swift */; };
@@ -76,6 +80,8 @@
 		4131773C1F8EF98A005F08F0 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
 		418C17561F97DB2E003C03F7 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		418C17571F97DB2E003C03F7 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		5A7F6A6025CC75A4009591AF /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = ../Carthage/Build/RxRelay.xcframework; sourceTree = "<group>"; };
+		5A7F6A6125CC75A4009591AF /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = ../Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
 		8B9882E21F86E1CF00ABE009 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9882E51F86E1CF00ABE009 /* RIBs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RIBs.h; sourceTree = "<group>"; };
 		8B9882E61F86E1CF00ABE009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7F6A6E25CC75B1009591AF /* RxRelay.xcframework in Frameworks */,
+				5A7F6A7025CC75B1009591AF /* RxSwift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7F6A6225CC75A4009591AF /* RxRelay.xcframework in Frameworks */,
+				5A7F6A6425CC75A4009591AF /* RxSwift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,12 +188,22 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		5A7F6A5F25CC75A4009591AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A7F6A6025CC75A4009591AF /* RxRelay.xcframework */,
+				5A7F6A6125CC75A4009591AF /* RxSwift.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B9882D81F86E1CF00ABE009 = {
 			isa = PBXGroup;
 			children = (
 				8B9882E41F86E1CF00ABE009 /* RIBs */,
 				8B9882EF1F86E1CF00ABE009 /* RIBsTests */,
 				8B9882E31F86E1CF00ABE009 /* Products */,
+				5A7F6A5F25CC75A4009591AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -509,7 +529,11 @@
 				);
 				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anchorfree.hss.RIBs-Mac";
@@ -537,7 +561,11 @@
 				);
 				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anchorfree.hss.RIBs-Mac";
 				PRODUCT_NAME = RIBs;
@@ -666,7 +694,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -693,7 +722,11 @@
 				);
 				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -730,7 +763,11 @@
 				);
 				INFOPLIST_FILE = RIBs/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -766,9 +803,21 @@
 					"$(PRODUCTS_DIR)../Carthage/Build/Mac/",
 				);
 				INFOPLIST_FILE = RIBsTests/Info.plist;
-				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uber.RIBsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
@@ -796,9 +845,21 @@
 					"$(PRODUCTS_DIR)../Carthage/Build/Mac/",
 				);
 				INFOPLIST_FILE = RIBsTests/Info.plist;
-				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uber.RIBsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
